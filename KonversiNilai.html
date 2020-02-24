@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Konversi Nilai </title>
+</head>
+<script language="Javascript">
+	function test () {
+		var T1=document.kirim.T1.value
+		var T2
+
+		if ((T1>=0)&&(T1<=40))
+		document.kirim.T2.value="E"
+		
+		else if ((T1>=41)&&(T1<=55))
+		document.kirim.T2.value="D"
+		
+		else if ((T1>=56)&&(T1<=60))
+		document.kirim.T2.value="C"
+		
+		else if ((T1>=61)&&(T1<=65))
+		document.kirim.T2.value="BC"
+		
+		else if ((T1>=66)&&(T1<=70))
+		document.kirim.T2.value="B"
+		
+		else if ((T1>=71)&&(T1<=80))
+		document.kirim.T2.value="AB"
+		
+		else if ((T1>=81)&&(T1<=100))
+		document.kirim.T2.value="A"
+
+		else
+		document.kirim.T2.value="angka tidak valid"
+	}
+</script>
+<body>
+	<form method="POST" name="kirim">
+		&nbsp;
+		<h2> Konversi Nilai Angka ke Nilai Huruf </h2>
+		<p> Nilai Angka : <input type="text" name="T1" size="2"> Konversi Nilai Huruf : <input type="text" name="T2" size="15" disabled="true"> </p>
+		<p><input type="button" name="B1" value="hasil"  onclick=test()></p>
+	</form>
+</body>
+</html>
